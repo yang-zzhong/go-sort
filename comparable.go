@@ -1,11 +1,11 @@
 package ysort
 
 type Comparable interface {
-	Less(Comparable) bool
+	Less(interface{}) bool
 }
 
-func swap(arr []Comparable, i, j int) {
-	tmp := arr[i]
-	arr[i] = arr[j]
-	arr[j] = tmp
+func swap(a []Comparable, i, j int) {
+	tmp := a[i]
+	a[i] = a[j]
+	a[j] = tmp
 }
