@@ -2,8 +2,17 @@ package ysort
 
 import (
 	"math"
-	"fmt"
 )
+
+func BottomUpMergeSort(arr []Comparable) {
+	s := new(MergeSort)
+	s.BottomUp(arr)
+}
+
+func TopDownMergeSort(arr []Comparable) {
+	s := new(MergeSort)
+	s.TopDown(arr)
+}
 
 type MergeSort struct {
 	aux []Comparable
@@ -20,7 +29,6 @@ func (s *MergeSort)BottomUp(arr []Comparable) {
 		for lo := 0; lo < len(arr) - sz; lo += sz * 2 {
 			hi := int(math.Min(float64(lo + 2 * sz), float64(len(arr)))) - 1
 			mid := lo + sz - 1
-			fmt.Printf("lo: %d, mid: %d, hi: %d\n", lo, mid, hi)
 			s.merge(arr, lo, mid, hi)
 		}
 	}
@@ -34,10 +42,10 @@ func (s *MergeSort)topdownMerge(arr []Comparable, lo, hi int) {
 	// fmt.Printf("lo: %d, mid: %d, hi: %d\n", lo, mid, hi)
 	s.topdownMerge(arr, lo, mid)
 	s.topdownMerge(arr, mid + 1, hi)
-	s.merge(arr, mid, lo, hi)
+	s.merge(arr, lo, mid, hi)
 }
 
-func (s *MergeSort)merge(arr []Comparable, mid, lo, hi int) {
+func (s *MergeSort)merge(arr []Comparable, lo, mid, hi int) {
 	for i := lo; i <= hi; i++ {
 		s.aux[i] = arr[i]
 	}
