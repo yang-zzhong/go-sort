@@ -1,5 +1,5 @@
 # go-sort
-a implement of algorithm 4th edition by golang
+a sort implement of algorithm 4th edition by golang
 
 1. [Intro Insertion Sort](https://iiiboo.cn/yang-zhong/%E6%8E%92%E5%BA%8F---%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
 2. [Intro Selection Sort](https://iiiboo.cn/yang-zhong/%E6%8E%92%E5%BA%8F---%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
