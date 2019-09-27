@@ -6,6 +6,10 @@ import (
 	"fmt"
 )
 
+func TestQuickSort(t * testing.T) {
+	test_sort(t, QuickSort, "quick sort", 100, 10000888, false)
+}
+
 func TestSelectionSort(t * testing.T) {
 	test_sort(t, SelectionSort, "selection sort", 100, 10000888, false)
 }

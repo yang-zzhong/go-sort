@@ -9,7 +9,7 @@ func SelectionSort(a []Comparable) {
 			}
 		}
 		if i != p {
-			swap(a, i, p)
+			swap(&a[i], &a[p])
 		}
 	}
 }

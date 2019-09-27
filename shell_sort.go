@@ -10,7 +10,7 @@ func ShellSort(a []Comparable) {
 		for i := h; i < N; i++ {
 			for j := i; j >= h; j -= h {
 				if a[j].Less(a[j - h]) {
-					swap(a, j, j - h)
+					swap(&a[j], &a[j - h])
 				} else {
 					break
 				}
